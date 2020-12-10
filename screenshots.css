@@ -1,0 +1,121 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 200px 0;
+}
+
+.screenshots{
+    text-align: center;
+}
+
+.screenshots .container{
+    width: 1100px;
+    margin: 0 auto;
+}
+/* HEADER */
+.screenshots header{
+    text-align: center;
+    padding-bottom: 45px;
+}
+
+.screenshots header h1{
+    font-size: 30px;
+    font-weight: 700;
+    color: #444;
+    padding-bottom: 20px;
+}
+
+.screenshots header h2{
+    color: #777;
+    padding-bottom: 60px;
+}
+/* Carousel div */
+.screenshots .g-carousel img{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.screenshots .g-carousel img{
+    transform: scale(0.6);
+    opacity: 0.4;
+}
+.screenshots .g-carousel .slick-current+div img,
+.screenshots .g-carousel .slick-current+div+div+div img{
+    transform: scale(0.7);
+    opacity: 0.7;
+}
+.screenshots .g-carousel .slick-current+div+div img{
+    transform: scale(1.0);
+    transition: 1s;
+    opacity: 1;
+}
+.slick-slide {
+    outline: none !important;
+}
+/* MockPhone */
+.g-carousel::before{
+    content: "";
+    position: absolute;
+    display: block;
+    margin-left: 425px;
+    margin-top: -50px;
+    width: 250px;
+    height: 500px;
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px 2px #a5a5a5;
+}
+.g-carousel::after{
+    content: "";
+    position: absolute;
+    bottom: -49px;
+    left: 529px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: white;
+    border: 1px solid rgb(192, 192, 192);
+    box-shadow: 0px 0px 4px 1px #c7c7c7;
+}
+/* Slick Dots */
+.slick-dots{
+    position: absolute;
+    bottom: -100px;
+    z-index: -2;
+}
+/* Display */
+.slick-dots::after{
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 393px;
+    border: 1px solid rgb(184, 184, 184);
+    top: -470px;
+    left: 439px;
+}
+/* Speaker */
+.slick-dots::before{
+    content: "";
+    position: absolute;
+    border-radius: 20%;
+    width: 50px;
+    height: 6px;
+    background-color: rgb(207, 207, 207);
+    top: -500px;
+    left: 523px;
+}
+/* Arrows Configuration */
+.slick-prev::before {
+ font-family: "Font Awesome\ 5 Free";
+ display: inline-block;
+ padding-right: 3px;
+ font-weight: 900;
+ content: "\f053";
+color: #9BA1D1;
+}
+.slick-next::before {
+ font-family: "Font Awesome\ 5 Free";
+ display: inline-block;
+ padding-right: 3px;
+ font-weight: 900;
+ content: "\f054";
+color: #9BA1D1;
+}
