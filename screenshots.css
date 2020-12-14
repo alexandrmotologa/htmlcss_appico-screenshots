@@ -7,7 +7,7 @@ body{
     text-align: center;
 }
 
-.screenshots .container{
+.container{
     width: 1100px;
     margin: 0 auto;
 }
@@ -104,18 +104,106 @@ body{
 }
 /* Arrows Configuration */
 .slick-prev::before {
- font-family: "Font Awesome\ 5 Free";
- display: inline-block;
- padding-right: 3px;
- font-weight: 900;
- content: "\f053";
-color: #9BA1D1;
+    font-family: "Font Awesome\ 5 Free";
+    display: inline-block;
+    padding-right: 3px;
+    font-weight: 900;
+    content: "\f053";
+    color: #9BA1D1;
 }
 .slick-next::before {
- font-family: "Font Awesome\ 5 Free";
- display: inline-block;
- padding-right: 3px;
- font-weight: 900;
- content: "\f054";
-color: #9BA1D1;
+    font-family: "Font Awesome\ 5 Free";
+    display: inline-block;
+    padding-right: 3px;
+    font-weight: 900;
+    content: "\f054";
+    color: #9BA1D1;
+}
+
+@media (max-width: 1140px){
+    .container{
+        width: 900px;
+        margin: 0 auto;
+    }
+    .g-carousel::before,
+    .g-carousel::after{
+        display: none;
+    }
+
+    .screenshots header h1{
+        font-size: 26px !important;
+        padding-bottom: 20px;
+    }
+    .screenshots header h2{
+        padding-bottom: 0px !important;
+    }
+
+    .slick-dots::after,
+    .slick-dots::before{
+        display: none;
+    }
+    .screenshots .g-carousel img,
+    .screenshots .g-carousel .slick-current+div+div img{
+    transform: scale(0.5);
+    }
+    .screenshots .g-carousel .slick-current+div img{
+        transform: scale(1.0);
+    }
+
+    .slick-dots{
+        bottom: -40px !important;
+        transform: scale(0.8);
+    }
+}
+@media (max-width: 1140px) and (orientation: portrait){
+    .screenshots .g-carousel img,
+    .screenshots .g-carousel .slick-current+div+div img{
+    transform: scale(0.4);
+    }
+    .screenshots .g-carousel .slick-current+div img{
+        transform: scale(1.0);
+    }
+}
+
+@media (max-width: 940px){
+    .container{
+        width: 90%;
+        height: 100vh;
+        margin: 0 auto;
+    }
+
+    .screenshots header h1{
+        font-size: 1.2em !important;
+        padding-bottom: 0.3em !important;
+        margin-top: -18vh;
+    }
+    .screenshots header h2{
+        font-size: 0.7em;
+        padding-bottom: 0px !important;
+        margin-bottom: -5vh;
+    }
+
+    .screenshots .g-carousel .slick-current img{
+        transform: scale(1.0);
+        opacity: 1;
+    }
+    
+}
+@media (max-width: 940px) and (orientation: landscape){
+    .screenshots .g-carousel .slick-slide{
+        text-align: center;
+    }
+    
+    .screenshots .g-carousel img{
+        width: auto;
+        height: 98vh;
+        opacity: 1;
+        display: inline-block;
+    }
+}
+
+.animations{
+    margin-top: 1000px;
+    background-color: #333;
+    padding: 10em;
 }
